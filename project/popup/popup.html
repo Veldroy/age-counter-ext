@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Counter</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <h1>Age Counter</h1>
+    </div>
+    
+    <div id="counter-display" class="counter-display" style="display: none;">
+      <div class="popup-section">
+        <div class="age-display">
+          <div class="total-count">
+            <span id="total-seconds">0</span> 
+            <span class="age-label">seconds</span>
+          </div>
+          <div class="detailed-count">
+            <div class="count-item">
+              <span id="years">0</span> years
+            </div>
+            <div class="count-item">
+              <span id="days">0</span> days
+            </div>
+            <div class="count-item">
+              <span id="hours">0</span> hours
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="birthdate-display">
+        Birth: <span id="birthdate-display"></span>
+      </div>
+    </div>
+    
+    <div id="setup-prompt" class="setup-prompt">
+      <p>Enter your birthdate to start tracking your age in seconds.</p>
+      <div class="input-group">
+        <input type="datetime-local" id="birthdate" name="birthdate">
+      </div>
+      <button id="save-birthdate" class="btn">Start Counting</button>
+    </div>
+    
+    <div class="popup-footer">
+      <button id="open-settings" class="btn btn-secondary">Settings</button>
+      <button id="open-counter" class="btn">Open Counter</button>
+    </div>
+  </div>
+  
+  <script src="../js/storage.js"></script>
+  <script src="../js/counter.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

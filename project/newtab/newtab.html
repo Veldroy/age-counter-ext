@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Counter</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div class="counter-container">
+    <div id="setup-prompt" class="setup-prompt fade-in">
+      <h1>Welcome to Age Counter</h1>
+      <p>Let's get started with a few quick details.</p>
+      <div class="input-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="given-name">
+      </div>
+      <div class="input-group">
+        <label for="birthYear">Birth Year</label>
+        <input type="number" id="birthYear" name="birthYear" min="1900" max="2024" placeholder="YYYY">
+      </div>
+      <div class="input-group birth-date">
+        <label for="birthMonth">Birth Date</label>
+        <div class="date-inputs">
+          <select id="birthMonth" name="birthMonth">
+            <option value="">Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+          </select>
+          <select id="birthDay" name="birthDay">
+            <option value="">Day</option>
+          </select>
+        </div>
+      </div>
+      <button id="save-birthdate" class="btn">Start Counting</button>
+      <p class="privacy-note">Your information is stored locally and never shared.</p>
+    </div>
+
+    <div id="counter" class="counter-display layout-minimal" style="display: none;">
+      <div class="counter-header">
+        <h1 id="greeting">Welcome back</h1>
+        <button id="open-settings" class="settings-button">⚙️</button>
+      </div>
+
+      <div class="counter-digits">
+        <div class="counter-section">
+          <div class="counter-value" id="years">0</div>
+          <div class="counter-label">Years</div>
+        </div>
+        <div class="counter-section">
+          <div class="counter-value" id="days">0</div>
+          <div class="counter-label">Days</div>
+        </div>
+        <div class="counter-section">
+          <div class="counter-value" id="hours">0</div>
+          <div class="counter-label">Hours</div>
+        </div>
+        <div class="counter-section">
+          <div class="counter-value" id="minutes">0</div>
+          <div class="counter-label">Minutes</div>
+        </div>
+        <div class="counter-section">
+          <div class="counter-value" id="seconds">0</div>
+          <div class="counter-label">Seconds</div>
+        </div>
+        <div class="counter-section milliseconds">
+          <div class="counter-value" id="milliseconds">000</div>
+          <div class="counter-label">ms</div>
+        </div>
+      </div>
+
+      <div class="total-seconds">
+        <span id="total-seconds">0</span> seconds total
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/themes.js"></script>
+  <script src="../js/counter.js"></script>
+  <script src="newtab.js"></script>
+</body>
+</html>

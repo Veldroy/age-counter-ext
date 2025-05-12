@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Counter Settings</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="options-header">
+      <h1>Age Counter Settings</h1>
+      <p>Customize your new tab age counter</p>
+    </header>
+
+    <main class="options-content">
+      <form id="settings-form">
+        <div class="settings-section">
+          <h2>Personal Information</h2>
+          
+          <div class="input-group">
+            <label for="birthdate">Your Birthdate</label>
+            <input type="datetime-local" id="birthdate" name="birthdate">
+            <small>This date is stored locally and used to calculate your age in seconds.</small>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h2>Appearance</h2>
+          
+          <div class="input-group">
+            <label for="theme">Theme</label>
+            <select id="theme" name="theme">
+              <option value="midnight">Midnight</option>
+              <option value="aurora">Aurora</option>
+              <option value="galaxy">Galaxy</option>
+              <option value="ocean">Ocean</option>
+              <option value="forest">Forest</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="colorScheme">Color Scheme</label>
+            <select id="colorScheme" name="colorScheme">
+              <option value="blue">Blue</option>
+              <option value="purple">Purple</option>
+              <option value="green">Green</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+              <option value="teal">Teal</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="font">Font</label>
+            <select id="font" name="font">
+              <option value="montserrat">Montserrat</option>
+              <option value="roboto">Roboto</option>
+              <option value="open-sans">Open Sans</option>
+              <option value="poppins">Poppins</option>
+              <option value="inter">Inter</option>
+            </select>
+          </div>
+          
+          <div class="theme-preview">
+            <h3>Preview</h3>
+            <div id="preview-container" class="preview-container">
+              <div class="preview-counter">
+                <div class="preview-digits">
+                  <div class="preview-section">
+                    <div class="preview-value">31</div>
+                    <div class="preview-label">Years</div>
+                  </div>
+                  <div class="preview-section">
+                    <div class="preview-value">182</div>
+                    <div class="preview-label">Days</div>
+                  </div>
+                  <div class="preview-section">
+                    <div class="preview-value">17</div>
+                    <div class="preview-label">Hours</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h2>Display</h2>
+          
+          <div class="input-group">
+            <label for="layout">Layout</label>
+            <select id="layout" name="layout">
+              <option value="minimal">Minimal</option>
+              <option value="detailed">Detailed</option>
+              <option value="compact">Compact</option>
+              <option value="creative">Creative</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="showMilliseconds">Show Milliseconds</label>
+            <div class="toggle-switch">
+              <input type="checkbox" id="showMilliseconds" name="showMilliseconds">
+              <label for="showMilliseconds"></label>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="showLabels">Show Labels</label>
+            <div class="toggle-switch">
+              <input type="checkbox" id="showLabels" name="showLabels">
+              <label for="showLabels"></label>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="animationSpeed">Animation Speed</label>
+            <select id="animationSpeed" name="animationSpeed">
+              <option value="slow">Slow</option>
+              <option value="normal">Normal</option>
+              <option value="fast">Fast</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="reset-button" class="btn btn-secondary">Reset to Defaults</button>
+          <button type="submit" id="save-button" class="btn">Save Settings</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="options-footer">
+      <p>Age Counter Extension &copy; 2025</p>
+    </footer>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/themes.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

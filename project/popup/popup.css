@@ -1,0 +1,116 @@
+/* Age Counter Popup Styles */
+body {
+  width: 320px;
+  height: 400px;
+  overflow-x: hidden;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.popup-header {
+  text-align: center;
+  padding: var(--space-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popup-header h1 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+  font-weight: 600;
+}
+
+.counter-display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+}
+
+.popup-section {
+  margin-bottom: var(--space-md);
+}
+
+.age-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) 0;
+}
+
+.total-count {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  font-weight: 700;
+}
+
+#total-seconds {
+  color: var(--accent-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.age-label {
+  font-size: var(--font-size-lg);
+  opacity: 0.8;
+}
+
+.detailed-count {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.count-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+
+.count-item span {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.birthdate-display {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+  margin-top: auto;
+  margin-bottom: var(--space-md);
+}
+
+/* Setup Prompt */
+.setup-prompt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.setup-prompt p {
+  margin-bottom: var(--space-md);
+}
+
+.setup-prompt .input-group {
+  width: 100%;
+  margin-bottom: var(--space-md);
+}
+
+/* Footer */
+.popup-footer {
+  padding: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
